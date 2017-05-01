@@ -1,0 +1,82 @@
+/*
+—————————————— 
+Autor: Alvaro Peris Zaragoza 
+Ano: 2017
+Descripción: 
+———————————————
+*/
+.topbar{
+	width: 100%;
+	height: 5vh;
+	background: var(--TopBar);
+	margin: 0px 0px 0px 0px;
+	position: fixed;
+	padding: 0px 0px 0px;
+	z-index: 100;
+	top: 0px;
+	left: 0px;
+	box-shadow: 0px 0px 20px rgba(0,0,0,0.5);	
+}
+
+.topbar h1{
+	display: inline-block;
+	padding-top: 10px;
+	font-size: 15px;
+	font-weight: 300;
+	padding-left: 20px;
+	color:var(--TopBarTitle);
+}
+
+.topbar .user{
+	height: 90%;
+	float: right;
+	padding: 5px;
+	padding-right: 20px;
+	margin-top: -.5%;
+	color: white;
+	transition: all .5s;
+	cursor: pointer;
+}
+
+
+.topbar .user p{display: inline-block; vertical-align: middle;
+padding-left: 10px; padding-top: 10px;
+}
+.topbar .user .fto{height: 20px; width: 20px;
+ border-radius: 100px; background: white;
+display: inline-block;vertical-align: middle;}
+
+.topbar .user:hover{
+	background: var(--TopBarUser);
+}
+
+ #fto{
+ 	margin-top: 5%;
+	height: 90px;
+	width: 90px;
+	background: white;
+	border-radius: 100px;
+
+}
+
+.logout{
+	display:none;
+	float: right;
+	padding-bottom: 20px;
+	width: 300px;
+	background: white;
+	margin-top: 1.5vh;
+	margin-right: -15%;
+	box-shadow: 0px 20px 20px rgba(0,0,0,0.3);
+	position:fixed;
+	z-index: -5;
+	right:200px;
+	color: white;
+
+}
+
+.rec{
+	background: var(--defaultColor);
+	padding-top: 5px;
+	padding-bottom: 5px;
+}

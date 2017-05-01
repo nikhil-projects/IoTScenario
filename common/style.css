@@ -1,0 +1,76 @@
+/*
+—————————————— 
+Autor: Alvaro Peris Zaragoza 
+Ano: 2017
+Descripción: 
+———————————————
+*/
+
+/* Constant Colors */
+:root {
+--grey: #F6F6F6;
+--dark: #121D22;
+--red: #F44336;
+--purple: #9C27B0;
+--blue: #2196F3;
+--cyan: #00BCD4;
+--lgreen:#8BC34A;
+--pink:#E91E63;
+--turc:#009688;
+--orange:#FF9800;
+--black:#000000;
+
+--agreen:#00878F;
+--aorange:#E47128;
+--algreen:#62AEB2;
+--ayellow:#E5AD24;
+--abreown:#8C7965;
+--InventorygenMessage:var(--defaultColor);
+
+--deepred:#D32F2F;
+--deeppurple:#7B1FA2;
+--deepblue:#1976D2;
+--deepcyan:#0097A7;
+--deeplgreen:#689F38;
+--deeporange:#EF6C00;
+--deepGrey:#BDBDBD;
+--deepdeepGrey:#757575;
+
+--LeftBarColor:#121D22;
+--LeftHigh:var(--defaultColor);
+--TopBar:var(--defaultColor);
+--TopBarTitle:white;
+--TopBarUser:#121D22;
+--TopBarUserLogOut:#00BCD4;
+
+
+}
+
+
+*{
+	
+	font-family: 'Roboto', sans-serif;
+	margin:0px 0px 0px 0px;
+	/*
+	-webkit-touch-callout: none; 
+    -webkit-user-select: none; 
+     -khtml-user-select: none;
+       -moz-user-select: none; 
+        -ms-user-select: none; 
+            user-select: none; */
+}
+
+body{background: var(--grey); overflow-y: hidden;}
+
+.main{
+	height: 90vh;
+	padding: 5vh;
+	width: 80%;
+	margin-left: 15%;
+	background: var(--grey);
+	overflow-y: scroll;
+}
+
+li{
+	list-style: none;
+}

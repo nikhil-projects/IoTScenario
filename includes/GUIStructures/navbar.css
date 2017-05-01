@@ -1,0 +1,55 @@
+/*
+—————————————— 
+Autor: Alvaro Peris Zaragoza 
+Ano: 2017
+Descripción: 
+———————————————
+*/
+.navbarItem{
+	width: 100%;
+	padding-top: 20px;
+	border-bottom: solid 1px var(--deepGrey);
+	   display: flex;
+      flex-direction: column;            
+      align-items: center;
+      margin-left: -20px;
+     
+
+}
+
+.navbarItem h1, .nav{
+	display: inline-block;
+	font-size: 15px;
+}
+
+
+.navbar ul.nav{
+	 flex: 0 1 auto;
+      position: absolute;           
+      left: 50%;
+      transform: translateX(-50%);
+}
+
+.navbarItem li.nav{
+	padding: 0px 10px 10px 10px;
+	font-weight: 300;
+	cursor: pointer;
+	transition: all .2s;
+	color: var(--deepdeepGrey);
+}
+
+.navbarItem li.nav:hover{
+	color: black;
+	transform: scale(1.02);
+}
+
+.navbarItem h1{align-self: flex-start; position: absolute; 
+margin-top:0px;
+	}
+
+/*
+	.navbarItem{
+		width: 85%;
+		position: absolute;
+		background: rgba(246,246,246,0.95);
+	}*/

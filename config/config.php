@@ -1,0 +1,9 @@
+<?php
+define("SERVER_NAME","localhost");
+define("ADMIN_NAME","admin");
+define("ADMIN_PASSWORD","123456789");
+define("DATABASE_NAME","IoTScenarioDB");
+define("DEVICE_KEY","XK3451");
+define("DEBUG_MODE","False");
+define("COLOR_THEME","blue");
+?>

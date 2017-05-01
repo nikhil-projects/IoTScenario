@@ -1,0 +1,199 @@
+.screen{
+	width: 85%;
+	top:5vh;
+	right: 0px;
+	height: 100vh;
+	position: fixed;
+	background: rgba(241,241,241,0.5);
+	z-index: 8;
+	box-shadow:0px 0px 20px rgba(0,0,0,0.5);
+	display: none;
+	-webkit-touch-callout: auto; /* iOS Safari */
+    -webkit-user-select: auto; /* Safari */
+     -khtml-user-select: auto; /* Konqueror HTML */
+       -moz-user-select: auto; /* Firefox */
+        -ms-user-select: auto; /* Internet Explorer/Edge */
+            user-select: auto; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+	-webkit-backdrop-filter: blur(10px);
+	backdrop-filter: blur(10px);
+
+}
+
+
+
+.but{
+	position: fixed;
+	left:0px;
+	top:0px;
+	background: red;
+	height: 120px;
+	width: 120px;
+	z-index: 400;
+}
+
+.screen p{
+	font-weight: bold;
+	font-size: 12px;
+}
+
+form{
+	color: black;
+}
+
+.screen form li{
+	padding: 10px;
+}
+
+select{
+	 appearance:none;
+    -moz-appearance:none;
+    -webkit-appearance:none;
+    border: 0px;
+    border-radius: 0px;
+
+}
+
+input[type=text], select, textarea{
+	width: 100%;
+	height: 30px;
+	font-size: 17px;	
+}
+
+.subBtn{
+    padding: 20px;
+	border-radius: 10px;
+	text-align: center;
+	width: 150px;
+	font-size: 15px;
+	word-wrap: break-word;
+	color: white;
+	cursor: pointer;
+	border: 0;
+	background: var(--defaultColor);
+	transition: all .5s;
+}
+
+.subBtn:hover{
+	transform: scale(1.08);
+}
+
+textarea{
+	height: 90px;
+	resize: none;
+}
+
+.color{
+	background: var(--red);
+	color: white;
+	cursor: pointer;
+	padding-left: 20px;
+	font-weight: bold;
+}
+
+.screen h1{
+	padding-left: 50px;
+	padding-top: 40px;
+	font-weight: 300;
+}
+
+.screen h2{
+	font-size: 16px;
+}
+
+.drch, .iz{
+	position: relative;
+	width: 49%;
+	display: inline-block;
+	vertical-align: top;
+	padding-right: 0px;
+}
+.drch li{
+	padding: 0px;
+}
+
+.drch li > h2{display: inline-block;}
+.drch li > .ic{display: inline-block; font-size: 20px; cursor: pointer; border: solid 2px var(--defaultColor);
+padding:7px; padding-top: 1px; padding-bottom: 1px; border-radius: 100px;
+margin-right: 20px;
+transition: all .5s;
+overflow-y: scroll;
+}
+.drch li > .ic:hover{
+	transform: scale(1.2);
+	background: var(--defaultColor);
+	color: white;
+}
+
+ul.icons{
+	height: 35px;
+	overflow-y: scroll;
+	width: 101%;
+	margin: 0 auto;
+	text-align: left;
+	padding: 0px;
+	cursor:all-scroll;
+	margin-left: 0px;
+	background: white;
+	border: solid 1px var(--deepGrey);
+}
+ul.icons li{
+	padding: 0px;
+	display: inline-block;
+
+}
+
+ul.icons li img{
+	cursor: pointer;
+	height: 30px;
+	width: 30px;
+	border: solid 2px rgba(0,0,0,0);
+	border-radius: 100px;
+	transition: all .5s;
+}
+
+
+
+ul.icons li img:hover{
+	border: solid 2px var(--defaultColor);
+}
+
+.selected{
+	background: var(--defaultColor);
+	border: solid 2px var(--defaultColor);
+}
+
+#SensorsForm > ul{
+	transform: scale(0.8);
+	padding-top: 0px;
+
+}
+#SensorsForm{
+	height: 35vh;
+	overflow-y: scroll;
+	width: 100%;
+	padding: 0px;
+}
+
+.deleteSensor{
+	height: 30px;
+	width: 30px;
+	background: black;
+	position: absolute;
+	right: -5px;
+	color: white;
+	text-align: center;
+	cursor: pointer;
+}
+
+.deleteSensor p{
+	font-size: 20px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.closescreen{padding: 20px; font-size: 20px; cursor: pointer; transition: all .5s;}
+.closescreen:hover{font-size: 35px; }
+
+
+

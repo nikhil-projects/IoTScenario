@@ -1,0 +1,19 @@
+
+h1{
+	padding: 30px;
+	color: var(--defaultColor);
+}
+
+li h2{
+	font-size: 14px;
+	color: var(--defaultColor);
+	padding:12px;
+}
+
+input[type=text]{
+	width: 40%;
+}
+
+#ColorPicker1{
+	width: 40%;
+}

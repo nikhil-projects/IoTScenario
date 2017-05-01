@@ -1,0 +1,62 @@
+
+.monDevice{
+	width: 100%;
+	padding: 0px 0px 0px 0px;
+	
+}
+
+.monitorBackTitle{
+margin-left: -10%;
+	width: 120%;
+	height: 250px;
+	/*background: var(--purple);*/
+	/*background-image: url(../resources/backgroundImg/lowpoly.png);*/
+	background-blend-mode: color-burn;
+
+   -moz-box-shadow:    inset 0 -5px 15px rgba(0,0,0,0.5);
+   -webkit-box-shadow: inset 0 -5px 15px rgba(0,0,0,0.5);
+   box-shadow:         inset 0 -5px 15px rgba(0,0,0,0.5);
+}
+
+.monitorBackTitle img{
+	height: 100px;
+	width: 100px;
+	border-radius: 100px;
+	background: black;
+	margin-left: 10%;
+	display: inline-block;
+	text-align: center;
+}
+
+.monitorBackTitle  img{
+	
+	height:105px;
+	width: 105px;
+	padding: 30px;
+	/*background: var(--deeppurple);*/
+	border-radius: 100px;
+    vertical-align:middle;
+	
+}
+
+.monitorBackTitle .credentials{
+	display: inline-block;
+}
+
+.monitorBackTitle ul li{
+	margin-left: 10%;
+	color: white;
+}
+
+.monitorBackTitle li:nth-child(3){
+	font-weight: 300;
+}
+
+
+.monitorBackTitle .info{
+	padding-top: 3%;
+	transition: all 5s;
+}
+.monitorBackTitle .info:hover{
+	transform: scale(1.1);
+}

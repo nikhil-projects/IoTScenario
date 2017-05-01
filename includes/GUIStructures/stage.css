@@ -1,0 +1,56 @@
+/*
+—————————————— 
+Autor: Alvaro Peris Zaragoza 
+Ano: 2017
+Descripción: 
+———————————————
+*/
+.stageItem{
+	padding: 20px;
+	width: 200px;
+	cursor: pointer;
+	transition: all 1s;
+	-webkit-transition: all 1s;
+	-moz-transition: all 1s;
+	-ms-transition: all 1s;
+	display: inline-block;
+	margin-left: 100px;
+
+}
+
+.stageItem .img{
+	width: 200px;
+	height: 200px;
+	background: var(--defaultColor);
+	border-radius: 4px;
+	font-weight: 300;
+	border: solid 0.5px var(--deepGrey);
+		transition: all .5s;
+	-webkit-transition: all .5s;
+	-moz-transition: all .5s;
+	-ms-transition: all .5s;
+	background-size: 200px 200px;
+    background-repeat: no-repeat;
+}
+
+.stageItem .img:hover{
+	transform: scale(1.03);
+}
+
+.stageItem .img:hover{
+	box-shadow: 0px 0px 10px rgba(0,0,0,0.4);
+}
+
+.stageItem ul{
+	padding: 0px;
+	padding-top: 5px;
+}
+
+.stageItem li{
+	padding: 3px;
+	padding-left: 0px;
+
+}
+
+.stageItem li:nth-child(1){font-weight: bold;}
+.stageItem li:nth-child(2){color: var(--deepGrey); font-size: 12px;}

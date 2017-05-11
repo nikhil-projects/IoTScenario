@@ -4,7 +4,7 @@ IoTScenario is a basic platform for the management of IoT devices that works ove
 
 It include the next features:
 
-## Create devices
+## Create and manage devices
 
 <img src="https://s-media-cache-ak0.pinimg.com/originals/83/03/8f/83038f629b634adc8dd005546074dbe9.png">
 

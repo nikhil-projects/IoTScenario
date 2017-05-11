@@ -18,7 +18,7 @@ It include the next features:
 
 ## Add new functions
 
-Add custom functionalities such a Geo Localization system.
+Add custom functionalities such a IP GeoLocation system.
 
 
 <img src="https://s-media-cache-ak0.pinimg.com/originals/26/dc/a7/26dca72cdc0f295a3505494390faca4b.png">

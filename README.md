@@ -16,7 +16,7 @@ It include the next features:
 
 <img src="https://s-media-cache-ak0.pinimg.com/originals/a7/65/a7/a765a7466a2e91730683b5e83d8c42d1.png">
 
-## Add new functions
+## Add your custom functions to the dashboard
 
 Add custom functionalities such a IP GeoLocation system.
 

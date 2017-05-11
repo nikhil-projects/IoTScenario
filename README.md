@@ -12,6 +12,10 @@ It include the next features:
 
 <img src="https://s-media-cache-ak0.pinimg.com/originals/08/7c/3f/087c3fa34065ea6614472c7f8865f651.png">
 
+## Create sensor reports or export the data to other programs
+
+<img src="https://s-media-cache-ak0.pinimg.com/originals/81/be/cf/81becfaece10f17dc4b2c8619eb103b2.png">
+
 ## User manage
 
 <img src="https://s-media-cache-ak0.pinimg.com/originals/a7/65/a7/a765a7466a2e91730683b5e83d8c42d1.png">

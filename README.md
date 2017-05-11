@@ -4,6 +4,9 @@
 
 IoTScenario is a basic platform for the management of IoT devices that works over HTTP protocol. It is designed for work whith commercial devices such as *NodeMCU ESP8266* or *SparkfunThing*. As well with more capable devices like *ArduinoYun*, *Raspberry Pi* or *Intel Galileo*.
 
+
+<img src="https://s-media-cache-ak0.pinimg.com/originals/cd/68/5d/cd685d7f7018848d7b2ab46aa0cf3058.png">
+
 It include the next features:
 
 ## Create and manage devices

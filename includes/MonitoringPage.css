@@ -8,7 +8,7 @@
 .monitorBackTitle{
 margin-left: -10%;
 	width: 120%;
-	height: 250px;
+	height: 150px;
 	/*background: var(--purple);*/
 	/*background-image: url(../resources/backgroundImg/lowpoly.png);*/
 	background-blend-mode: color-burn;
@@ -18,6 +18,8 @@ margin-left: -10%;
    box-shadow:         inset 0 -5px 15px rgba(0,0,0,0.5);
 }
 
+
+
 .monitorBackTitle img{
 	height: 100px;
 	width: 100px;
@@ -26,6 +28,7 @@ margin-left: -10%;
 	margin-left: 10%;
 	display: inline-block;
 	text-align: center;
+	
 }
 
 .monitorBackTitle  img{
@@ -36,6 +39,7 @@ margin-left: -10%;
 	/*background: var(--deeppurple);*/
 	border-radius: 100px;
     vertical-align:middle;
+   
 	
 }
 
@@ -44,7 +48,7 @@ margin-left: -10%;
 }
 
 .monitorBackTitle ul li{
-	margin-left: 10%;
+	margin-left: 0%;
 	color: white;
 }
 
@@ -54,9 +58,9 @@ margin-left: -10%;
 
 
 .monitorBackTitle .info{
-	padding-top: 3%;
+	padding-top: 1%;
 	transition: all 5s;
 }
 .monitorBackTitle .info:hover{
-	transform: scale(1.1);
+	transform: scale(1.04);
 }

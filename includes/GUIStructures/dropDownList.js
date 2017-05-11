@@ -91,7 +91,8 @@ $('.deleter').click(function(event) {
     //Tomamos el id del dispositivo para poder borrarlo de la 
     //base de datos.
     var id = $(this).attr('id');
-
+    //Borramos el elemento de pantalla
+    $('#'+id).hide('slow', function() {});
     //Nos comunicamos con la página que contiene el php 
     //que borra el elemento de la base de datos
       var directoryPath = 'ComDB/Handler.php';
@@ -103,7 +104,7 @@ $('.deleter').click(function(event) {
         complete: function(res) {   
             console.log(res.responseText);
             //Confirmamos que se ha borrado el elemento
-            alert(res.responseText);
+            //alert(res.responseText);
             //Recargamos la página
             ReloadInventory();
         }

@@ -12,7 +12,7 @@ $(document).ready(function(){
 	
 
 	//Se encarga de actualizar los valores de los displayers.
-	setInterval(ajaxExec, 1000); //Consultamos la base de datos cada segundo
+	setInterval(ajaxExec, 2000); //Consultamos la base de datos cada segundo
 	function ajaxExec(){        
 		$.ajax({
             type: "POST",
@@ -21,6 +21,7 @@ $(document).ready(function(){
             success : function (data) {
                 //$(".main").html(data);
                 plotSensorValues(data);
+           		updateChart(data);
             }
         });
 	}//Fin AJAX exec
@@ -35,6 +36,25 @@ $(document).ready(function(){
 		return mes;
 	}//End get sensors ids
 
+
+	//Actualiza los valores del gráfico (Se lanzan en el php de chartObj.php)
+	function updateChart(dataX){
+		var data=[];
+		var data = JSON.parse(dataX);
+		for (var i = data.length - 1; i >= 0; i--){
+			chartdata.datasets[i].data.push(data[i].value);
+			chartdata.datasets[i].data.shift();
+		}//for
+		var  myLineChart = new Chart(ctx , {
+    		  type: "line",
+    		  data: chartdata,
+    		  options: {
+    			animation: {
+        			duration: 0
+    			}
+				} 
+			});
+	}//End function
 
 	//Recorre la recepción del servidor y coloca el valor de 
 	//cada sensor en su espacio en el DOM.

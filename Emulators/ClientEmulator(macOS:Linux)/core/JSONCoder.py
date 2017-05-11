@@ -40,8 +40,8 @@ class JSONCoder(object):
 		self.message['Sensor'][signalName] = value
 
 	def GetMessage(self):
-		if(config.DEBUG_MODE):
-			print '	..................\n \n JSONMessage: ' + json.dumps(self.message)
+		#if(config.DEBUG_MODE):
+			#print '	..................\n \n JSONMessage: ' + json.dumps(self.message)
 		return json.dumps(self.message)
 
 

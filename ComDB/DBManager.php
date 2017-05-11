@@ -20,7 +20,7 @@ $dbm->Insert('DeviceType',['Color', 'Developer', 'Icon', 'Name'],['"color"', '"D
 
 //include '../config/config.php'; //Incluimos las constantes
 
-
+define("DEBUGa",false);
 class SDBManager
 {
 
@@ -33,7 +33,8 @@ class SDBManager
 	var $connection;
 
 	function __construct()
-	{
+	{	
+
 		$this->servername = SERVER_NAME;
 		$this->username = ADMIN_NAME;
 		$this->password = ADMIN_PASSWORD;
@@ -56,29 +57,42 @@ class SDBManager
 
 	//Comprueba si existe un usuario, en caso de que exista crea una 
 	//sesión para este
-	function checkUser($user, $passwd){
+	//Comprueba si existe un usuario, en caso de que exista crea una 
+	//sesión para este
+	function checkUser($user, $passwd, $userDB, $userPW){
 		$this->connect();
-		$table = USER_TABLE;
-		$sql = "SELECT * FROM $table WHERE username = '$user' AND password = '$passwd'";
-		$result = mysqli_query($this->connection, $sql);
+		$table = 'Users';
 
-		$row = $result->fetch_array(MYSQLI_ASSOC);
-		if ($passwd == $row['password']) {
-			//Iniciamos sesión
-			session_start();
+		$sql = "SELECT * FROM $table WHERE ".$userDB." = '".$user."' AND ".$userPW." = '".$passwd."'";
+		if(DEBUGa) echo '<br><br><br><br>SQLP  '.$sql;
+
+		$result = mysqli_query($this->connection, $sql);
+		
+
+		if ($result->num_rows > 0) {}
+ 		$row = $result->fetch_array(MYSQLI_ASSOC);
+ 		if ($passwd == $row['UserPassword']) { 
+			
+    		mysqli_close($this->connection);
+    		if(DEBUGa)echo "<br>Correcto.";
+    		//Iniciamos sesión
+			session_start();	
 			$_SESSION["user_id"]=$user;
+			$_SESSION["name"] = $row['UserName'];
 			$_SESSION['loggedin'] = true;
 			$_SESSION['start'] = time();
 			$_SESSION['expire'] = $_SESSION['start'] + (5 * 60); 
+			 //echo "Bienvenido! " . $_SESSION['username'];
+    		return true;
 
-			return True;
-		}else{
-			//Printamos una alerta diciendo que los campos entrados son incorrectos.
-			echo "<script>alert('User or Password fields are incorrect');</script>";
-			return False;
-			}
-		mysqli_close($this->connection);
-		}
+ 		} else { 
+ 			mysqli_close($this->connection);
+   			if(DEBUGa)echo "<br>Username o Password estan incorrectos.";
+   			return false;
+ 		}
+
+	}//Check user
+
 
 
 	//FUNCTION FOR DEBUG COMUNICATIONS WITH DATABASE
@@ -109,11 +123,40 @@ class SDBManager
 		}
 		$column.='</table>';
 		echo $column;
+		mysqli_close($this->connection);	
 	}//End func
+
+	//Retorna información de la base de datos SELECT, la
+	//entrada es del tipo string de sql request
+	function Read($sql){
+		$this->connect();
+		$result = mysqli_query($this->connection, $sql);
+		$row = $result -> fetch_array(MYSQLI_ASSOC);
+		mysqli_close($this->connection);
+		return $row;
+	}
+
+	function ReadRecursive($sql){
+		$this->connect();
+		$ret =[];
+		$result = mysqli_query($this->connection, $sql);
+		while($row = $result -> fetch_array(MYSQLI_ASSOC)){
+			array_push($ret, $row);
+		}
+		mysqli_close($this->connection);
+		return $ret;
+	}
+
+	//Sentencia en crudo. Ejecuta una sentencia sql, no
+	//devuelve nada 
+	function rawSql($sql){
+		$this->connect();
+		$result = mysqli_query($this->connection, $sql);
+		mysqli_close($this->connection);
+	}
 
 	//INSERTs a new element in the dB
 	function Insert($table,$fields, $values){
-		
 		include '../config/config.php';
 		$in = 'INSERT INTO `'.$table.'`(';
 		$fc = true; //Field counter
@@ -138,7 +181,7 @@ class SDBManager
 			}
 		}//foreach
 		$in.=')';
-
+		echo "Entrada a insertar: ".$in;
 		if(DEBUG_MODE == "True"){
 			echo 'Entrada a insertar: '.$in.'\n<br>';
 		}
@@ -239,9 +282,7 @@ class SDBManager
 			mysqli_close($this->connection);	
 			return $MyInventory;
 		//En if no empty
-		}else{
-			mysqli_close($this->connection);
-		}
+		}else{mysqli_close($this->connection);}
 			
 		}//End Inventory query
 	
@@ -368,8 +409,31 @@ class SDBManager
 		$this->connect();
 		$result = mysqli_query($this->connection, $sql);
 	}
+
+	//Devuelve las n últimas muestras de un sensor y el tiempo en el que se tomaron.
+	function getNSamples($id,$nsamples){
+	$sql = 'SELECT s.value as value
+			FROM Sample s 
+			WHERE s.Sensor_idSensor = '.$id.' 
+			ORDER BY s.idSample 
+			DESC LIMIT '.$nsamples;
+
+		
+		$this->connect();			
+		$result = mysqli_query($this->connection, $sql);
+
+		$samples = array();
+		$count =0;
+		While($row = $result -> fetch_array(MYSQLI_ASSOC)){
+			$samples[$count] = array("value"=>$row["value"]);
+			$count++;
+		}
+
+		return $samples;
+	}//getSamples
 }//Final clase
 
+	
 
 /**
 * Almacena la información de los dispositivos

@@ -13,11 +13,9 @@ Descripción:
 	include '../includes/GUIStructures/dropDownList.php'; //Drop down main file library
 	include '../ComDB/DBManager.php'; //Manage the DB connections
 ?>
-<script src="pages/Inventory.js"></script>
+	<script src="pages/Inventory.js"></script>
+	
 <?php 
-	/**
-	* Inventory
-	*/
 	class Inventory
 	{
 		var $DeviceList; //Stores de devices showed in the screen

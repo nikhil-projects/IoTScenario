@@ -18,6 +18,7 @@ Example:
 	class Rx
 	{
 		
+		var $ip;
 		function __construct()
 		{
 			$this->Loader();
@@ -33,24 +34,67 @@ Example:
 			//Leemos el cuerpo de de la petición.
 			$request_body = file_get_contents('php://input');
 			if($request_body!=""){
-				
 				$msg = new Request((String)$request_body);
 				if($msg->sKey != ""){
 					if($this->checkPassword($msg->sKey)){
-						$this->storeSampleValue($msg);
+						//Registramos la IP del cliente
+						$ip = $this->getClientIP(); //<-----IP
+						$this->storeSampleValue($msg,$ip);
+						echo "ok";
 					}//CheckPassword
 				}//msg != ""
 			}//request != ""
-		}
+		}//End RecData		
 
 		//Almacena la muestra que ha llegado en la base de datos.
-		function storeSampleValue($obj){
+		function storeSampleValue($obj,$ip){
 			$db = new SDBManager();
+
+			//Para cada sensor del dispositivo almacenamos.
 			foreach ($obj->Sensors as $key => $value) {
 				//Almacenamos las muestras del sensor en la base de datos
 				$db->Insert('Sample',['Sensor_idSensor','value'],[$key,$value]);
-			}
+				$ide = $key;
+				//Almacenamos la IP en la dB
+				$this->SaveIP($ip,$ide);
+			}//Fin del foreach	
 		}//End store Sample value
+
+		//Registramos la IP del cliente con fines de geolocalización
+		function getClientIP(){
+			$client  = @$_SERVER['HTTP_CLIENT_IP'];
+			$forward = @$_SERVER['HTTP_X_FORWARDED_FOR'];
+			$remote  = $_SERVER['REMOTE_ADDR'];
+
+			if(filter_var($client, FILTER_VALIDATE_IP))
+			 $ip = $client;
+			 elseif(filter_var($forward, FILTER_VALIDATE_IP))
+			 $ip = $forward;
+			 else
+			 $ip = $remote;
+			 return $ip;
+		}//End getClientIP
+
+		//Almacena el valor IP de un dispositivo en la base de datos a partir del
+		// id del sensor que transmite la muestra
+		function SaveIP($ip,$key){
+			$db = new SDBManager();
+			//Obtención de la id del dispositivo a partir del valor
+			// de la muestra.
+			$sql='SELECT d.idDevices as sid
+			FROM Sensor s 
+			LEFT JOIN Devices d ON s.Devices_idDevices = d.idDevices
+			WHERE s.idSensor ='.$key; 
+			$row = $db->Read($sql);
+			
+			//$this->store($row["sid"]);
+			//Almacenamos el valor de la IP:
+			
+			$sql="UPDATE Devices d
+				  SET IP = '".$ip."'
+				  WHERE d.idDevices =".$row["sid"];
+			$db->rawSql($sql);
+		}//End save IP
 
 		//Retorna la id del sensor y el valor de la última muestra 
 		//almacenada en este
@@ -102,6 +146,12 @@ Example:
 			fwrite($baseDatos, "->".$request_body."\n");
 			fclose($baseDatos);
 		}
+
+		function store($txt){
+			$txt = "Entrada registrada->     ".$txt."\n";
+			file_put_contents('debug.txt', $txt.PHP_EOL , FILE_APPEND | LOCK_EX);
+		}
+
 		//============================================
 
 

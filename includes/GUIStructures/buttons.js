@@ -19,10 +19,16 @@ $(document).ready(function(){
  		case 'Matlab':
  			var mes = {"data":ide,"function":"GenMatlab"};
  			ajaxExec(mes);
+            var win = window.open('ComDB/IoTScenario.m', '_blank');
+            //Abrimos un tab para descargar el reporte
+            OpenTab()
  			break;
  		case 'Report':
  			var mes = {"data":ide,"function":"GenReport"};
  			ajaxExec(mes);
+            var win = window.open('ComDB/IoTScenarioReport.pdf', '_blank');
+            //Abrimos un tab para descargar el reporte
+            OpenTab()
  			break;
  		case 'Delete':
  			var mes = {"data":ide,"function":"DeleteSamples"};
@@ -37,6 +43,15 @@ $(document).ready(function(){
  	//alert("Función:" + req + " id: " + ide);
  });
 
+function OpenTab(win){
+        if (win) {
+            //Browser has allowed it to be opened
+            win.focus();
+            } else {
+            //Browser has blocked it
+            alert('Please allow popups for get the report');
+        }    
+}
 
  var directoryPath = 'ComDB/Reports.php';
 //Se encarga de actualizar los valores de los displayers.
@@ -47,7 +62,6 @@ $(document).ready(function(){
         	data: {message: mess},
             success : function (data) {
             	console.log('Llega: '+data);
-                alert("Proceded");
             }
         });
 	}//Fin AJAX exec

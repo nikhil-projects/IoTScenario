@@ -170,7 +170,7 @@ $('.screen').on('click','.subBtn',function(event) {
   		"Description":Description,
   		"Color":Color,
   		"DeviceIcon":Icon,
-  		"Sensors":[]
+  		"Sensors":new Array()
   		};
   	
   	$('#deviceName').val("");
@@ -180,7 +180,13 @@ $('.screen').on('click','.subBtn',function(event) {
 	//Obtenemos el valor de los sensores estos vienen definidos
 	// por el ItemCount estos se identifican como sensor ItemCount
 	for(var i=0; i < itemCount; i++){
+		alert("Entra al bucle");
+		console.log(i + " / " + itemCount );
+
 		var SN = $('#sensorName'+ i).val();
+
+		console.log("SensorAnadido:" + SN);
+
 		if(SN == ''){ formOK = false; alert("The field 'Sensor Signal Name' is mandatory!"); return;}
 
 		var SU = $('#sensorUnits'+i).val();
@@ -193,31 +199,41 @@ $('.screen').on('click','.subBtn',function(event) {
 		if(Ic== ''){ formOK = false; alert("Choose an icon for sensor!"); return;}
 		Ic = Ic.replace('resources/icon-black/','');
 		
+		
 		//añadimos el elemento a la estructura JSON
-		myJ.Sensors.push(
+		/*myJ.Sensors.push(
 			{"SName":SN,
 			"SUnits":SU,
 			"Color":ColorS,
 			"Icon":Ic}
-		);
+		);*/
+		alert("Va a crear el json");
+		var tmp = {"SName":SN,
+			"SUnits":SU,
+			"Color":ColorS,
+			"Icon":Ic};
+		myJ.Sensors.push(tmp);
+
+		alert("Mensaje de sensor:" + JSON.stringify(tmp));
+		console.log(JSON.stringify(tmp));
 	}//Fin del for
 	
 
 	//Envio del formulario para procesarlo en PHP
-	$directoryPath = 'ComDB/Handler.php'
-
+	var directoryPath = 'ComDB/Handler.php'
 	var mes = {
 		"function":"LoadDeviceForm",
 		"data":myJ
 	} 
+	alert("Mensaje a enviar:" + JSON.stringify(mes));
+	console.log(JSON.stringify(mes));
 	$.ajax({
         type: "POST",
-        url: $directoryPath,
+        url: directoryPath,
         data: {message: mes},
         complete: function(res) {
         	//Texto de respuesta positiva o negativa a la petición
-        	console.log('Esto llega: '+ res.responseText);
-            $('html').append(res.responseText);
+            //$('html').append(res.responseText);
              $('.screen').slideUp();
         }
     });

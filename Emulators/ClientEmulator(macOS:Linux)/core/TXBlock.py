@@ -11,15 +11,15 @@ Descripción:
 
 import socket, sys
 import config
-
+DEBUG = True
 # El modo DEBUG printa las operaciones que esta realizando el
 # cliente
-DEBUG = False
 
 class Comunicacion(object):	
 	IPServidor = '' 
 	Puerto = 0 
 	direccion = ''
+	count = 0 #Contador de mensajes
 
 	#Constructor de la clase
 	def __init__(self, ip, port, dir,clave):
@@ -33,6 +33,10 @@ class Comunicacion(object):
 	# dato.
 	def enviar(self,dato):
 		mns = self.mensajePOST(dato)
+		if(DEBUG):
+			self.count += 1
+			print "\033[92m-> 📦 Mensaje " + str(self.count) + "\033[0m"
+			print mns
 		self.conexion(mns)
 
 	#Compone el mensaje a enviar en HTTP
@@ -51,20 +55,16 @@ class Comunicacion(object):
 		# Creamos un socket TCP/IP
 		sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
-		# Conectamos con el servidor
-		if DEBUG:
-			print("COnectando al servidor ...")
+		# Conectamos con el servido
 		dir_servidor = (self.IPServidor, self.Puerto)
 		sock.connect(dir_servidor)
 
-		if DEBUG:
-			print("Enviando información ...")
 		# Enviamos informacion
 		sock.sendall(transmision)
 
 		#Cerramos el socket
 		sock.close()
-		if DEBUG:
-			print("Conexión cerrada ...")
+		#if DEBUG:
+			#print("Conexión cerrada ...")
 
 

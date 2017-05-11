@@ -13,7 +13,7 @@ new displayItem('uno', 'Sensor2', '0.0', 'cm', 'agua','var(--deepPurple)' ,'var(
 new displayItem('uno', 'Sensor3', '0.0', 'cm', 'metro','var(--deepBlue)' ,'var(--blue)');
 new displayItem('uno', 'Sensor3', '0.0', 'cm', 'metro','var(--deepBlue)' ,'var(--blue)');
 -->
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.min.js"></script>
 <?php 
 	if (session_status() != PHP_SESSION_ACTIVE) {
 		session_start();
@@ -105,6 +105,11 @@ new displayItem('uno', 'Sensor3', '0.0', 'cm', 'metro','var(--deepBlue)' ,'var(-
 		}//End Switch
 		}//End Switcher
 
+
+		//================================
+		//Genera la página de los sensores 
+		//================================
+
 		function GenerateMonitoringPage($IDGeneral,$IDSensorArray,$IDActuatorArray){
 			//HTML
 			echo '
@@ -125,6 +130,12 @@ new displayItem('uno', 'Sensor3', '0.0', 'cm', 'metro','var(--deepBlue)' ,'var(-
 				new Sensor($id);
 			}//End foreach
 			echo'</div>';
+
+			//Generación de los graficos:
+			include '../Charts/chartObj.php';
+			echo "<br><br><h3>Charts</h3>";
+			$numMuestras = 30;
+			new chartObj($IDSensorArray, $numMuestras);
   
 
 		}

@@ -1,3 +1,11 @@
+<!--
+=====================
+Autor: Alvaro Peris Zaragoza 
+Ano: 2017
+Descripción: Módulo para almacenar firmwares
+====================
+-->
+
 <?php 
 require('fpdf16/fpdf.php');
 

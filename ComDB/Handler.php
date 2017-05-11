@@ -11,9 +11,9 @@ Descripción:
 /**
 * 
 */
-
-include 'DBManager.php';
 include '../config/config.php'; //Incluimos las constantes
+include 'DBManager.php';
+
 
 class DataHandler
 {
@@ -84,12 +84,13 @@ class DataHandler
 			$co = $v['Color'];
 			$ic = $v['Icon'];
 
-			$id = $db->Insert('Sensor',['Name','Color','Icon','Devices_idDevices'], ['"'.$nam.'"','"'.$co.'"','"'.$ic.'"',$id]);
-			//Inicializamos una entrada para alamcenar las muestras  de los sensores.
-			$db->Insert('Sample',['Sensor_idSensor','value'],[$id,0.0]);
-		}
+			//echo "<h1 style='color:blue;'> ---------------------------------------------- Se va a insertar:". $nam. ",</h1>";
 
-		echo "<script>alert('Device Created !');</script>";
+			$id2 = $db->Insert('Sensor',['Name','Color','Icon','Devices_idDevices'], ['"'.$nam.'"','"'.$co.'"','"'.$ic.'"',$id]);
+			//Inicializamos una entrada para alamcenar las muestras  de los sensores.
+			$db->Insert('Sample',['Sensor_idSensor','value'],[$id2,0.0]);
+
+		}
 	}//End readDeviceForm
 
 	

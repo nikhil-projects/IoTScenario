@@ -11,6 +11,7 @@ Cliente Python
 ———————————————
 '''
 import sys
+import os
 sys.path.append('core/')
 sys.path.append('sensor/')
 
@@ -24,9 +25,12 @@ import RandomSensor
 # esta operando
 def printConf():
 	print'\n\n'
+	print('⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️')
+	print(' 🙇 Author: ' + config.AUTHOR)
 	print('\033[92m' + config.DEVICE_NAME + "  Client running ...")
 	print('Server Target: ' + config.SERVER_IP + ' : '+ str(config.SERVER_PORT) + ' ' + config.SERVER_PATH)
 	print('\033[0m')
+	print('⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️\n\n')
 
 #--------- DECLARACIONES setup-------
 printConf()
@@ -60,4 +64,9 @@ while True:
 	Tx.enviar(msg)
 
 	time.sleep(config.TIME_DELAY) #Esperamos un poco para repetir el proceso
+
+	os.system('clear')
+	printConf()
+
+
 

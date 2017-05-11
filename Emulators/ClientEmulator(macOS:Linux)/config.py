@@ -3,7 +3,8 @@
 
 '''
 —————————————— 
-Autor: Alvaro Peris Zaragoza 
+Autor: Alvaro Peris Zaragoza
+
 Ano: 2017
 Descripción: 
 Constantes del dispositivo
@@ -12,12 +13,13 @@ Constantes del dispositivo
 
 #Nombre del dispositivo
 #------------------------
-DEVICE_NAME = 'MiDispositivo'
+DEVICE_NAME = 'Emulador de sensor'
+AUTHOR = 'Alvaro Peris'
 DEVICE_ID = '12345'
 SERVER_KEY = 'XK3451'
 
 
-SIGNAL_ID = 14
+SIGNAL_ID = 17
 
 #Red
 #------------------------

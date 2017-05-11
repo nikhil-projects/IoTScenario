@@ -9,7 +9,7 @@ Descripción:
 <script src="includes/left-bar/leftbar.js"></script>
 
 <?php 
-	$leftbar = ['Home','Stages', 'Inventory', 'Monitoring', 'DataBase','Options'];
+	$leftbar = ['Home','Inventory', 'Monitoring','Users','Options'];
 	// The icons showed in the left bar path
 	$iconpath = "resources/icons/"
 ?>

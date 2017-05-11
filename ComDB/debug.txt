@@ -1,0 +1,288 @@
+Entrada registrada->     UPDATE Devices d
+				  SET IP = 192.168.1.131
+				  WHERE d.idDevices =53
+
+Entrada registrada->     UPDATE Devices d
+				  SET IP = 192.168.1.131
+				  WHERE d.idDevices =53
+
+Entrada registrada->     UPDATE Devices d
+				  SET IP = 192.168.1.131
+				  WHERE d.idDevices =53
+
+Entrada registrada->     UPDATE Devices d
+				  SET IP = 192.168.1.131
+				  WHERE d.idDevices =53
+
+Entrada registrada->     UPDATE Devices d
+				  SET IP = 192.168.1.131
+				  WHERE d.idDevices =53
+
+Entrada registrada->     UPDATE Devices d
+				  SET IP = 192.168.1.131
+				  WHERE d.idDevices =53
+
+Entrada registrada->     UPDATE Devices d
+				  SET IP = 192.168.1.131
+				  WHERE d.idDevices =53
+
+Entrada registrada->     UPDATE Devices d
+				  SET IP = 192.168.1.131
+				  WHERE d.idDevices =53
+
+Entrada registrada->     UPDATE Devices d
+				  SET IP = 192.168.1.131
+				  WHERE d.idDevices =53
+
+Entrada registrada->     UPDATE Devices d
+				  SET IP = 192.168.1.131
+				  WHERE d.idDevices =53
+
+Entrada registrada->     UPDATE Devices d
+				  SET IP = '192.168.1.131'
+				  WHERE d.idDevices =53
+
+Entrada registrada->     UPDATE Devices d
+				  SET IP = '192.168.1.131'
+				  WHERE d.idDevices =53
+
+Entrada registrada->     UPDATE Devices d
+				  SET IP = '192.168.1.131'
+				  WHERE d.idDevices =53
+
+Entrada registrada->     UPDATE Devices d
+				  SET IP = '192.168.1.131'
+				  WHERE d.idDevices =53
+
+Entrada registrada->     UPDATE Devices d
+				  SET IP = '192.168.1.131'
+				  WHERE d.idDevices =53
+
+Entrada registrada->     UPDATE Devices d
+				  SET IP = '192.168.1.131'
+				  WHERE d.idDevices =53
+
+Entrada registrada->     UPDATE Devices d
+				  SET IP = '192.168.1.131'
+				  WHERE d.idDevices =53
+
+Entrada registrada->     UPDATE Devices d
+				  SET IP = '192.168.1.131'
+				  WHERE d.idDevices =53
+
+Entrada registrada->     UPDATE Devices d
+				  SET IP = '192.168.1.131'
+				  WHERE d.idDevices =53
+
+Entrada registrada->     UPDATE Devices d
+				  SET IP = '192.168.1.131'
+				  WHERE d.idDevices =53
+
+Entrada registrada->     UPDATE Devices d
+				  SET IP = '192.168.1.131'
+				  WHERE d.idDevices =53
+
+Entrada registrada->     UPDATE Devices d
+				  SET IP = '192.168.1.131'
+				  WHERE d.idDevices =53
+
+Entrada registrada->     UPDATE Devices d
+				  SET IP = '192.168.1.131'
+				  WHERE d.idDevices =53
+
+Entrada registrada->     UPDATE Devices d
+				  SET IP = '192.168.1.131'
+				  WHERE d.idDevices =53
+
+Entrada registrada->     UPDATE Devices d
+				  SET IP = '192.168.1.131'
+				  WHERE d.idDevices =53
+
+Entrada registrada->     UPDATE Devices d
+				  SET IP = '192.168.1.131'
+				  WHERE d.idDevices =53
+
+Entrada registrada->     UPDATE Devices d
+				  SET IP = '192.168.1.131'
+				  WHERE d.idDevices =53
+
+Entrada registrada->     UPDATE Devices d
+				  SET IP = '192.168.1.131'
+				  WHERE d.idDevices =53
+
+Entrada registrada->     UPDATE Devices d
+				  SET IP = '192.168.1.131'
+				  WHERE d.idDevices =53
+
+Entrada registrada->     UPDATE Devices d
+				  SET IP = '192.168.1.131'
+				  WHERE d.idDevices =53
+
+Entrada registrada->     UPDATE Devices d
+				  SET IP = '192.168.1.131'
+				  WHERE d.idDevices =53
+
+Entrada registrada->     UPDATE Devices d
+				  SET IP = '192.168.1.131'
+				  WHERE d.idDevices =53
+
+Entrada registrada->     UPDATE Devices d
+				  SET IP = '192.168.1.131'
+				  WHERE d.idDevices =53
+
+Entrada registrada->     UPDATE Devices d
+				  SET IP = '192.168.1.131'
+				  WHERE d.idDevices =53
+
+Entrada registrada->     UPDATE Devices d
+				  SET IP = '192.168.1.131'
+				  WHERE d.idDevices =53
+
+Entrada registrada->     UPDATE Devices d
+				  SET IP = '192.168.1.131'
+				  WHERE d.idDevices =53
+
+Entrada registrada->     UPDATE Devices d
+				  SET IP = '192.168.1.131'
+				  WHERE d.idDevices =53
+
+Entrada registrada->     UPDATE Devices d
+				  SET IP = '192.168.1.131'
+				  WHERE d.idDevices =53
+
+Entrada registrada->     UPDATE Devices d
+				  SET IP = '192.168.1.131'
+				  WHERE d.idDevices =53
+
+Entrada registrada->     UPDATE Devices d
+				  SET IP = '192.168.1.131'
+				  WHERE d.idDevices =53
+
+Entrada registrada->     UPDATE Devices d
+				  SET IP = '192.168.1.131'
+				  WHERE d.idDevices =53
+
+Entrada registrada->     UPDATE Devices d
+				  SET IP = '192.168.1.131'
+				  WHERE d.idDevices =53
+
+Entrada registrada->     UPDATE Devices d
+				  SET IP = '192.168.1.131'
+				  WHERE d.idDevices =53
+
+Entrada registrada->     UPDATE Devices d
+				  SET IP = '192.168.1.131'
+				  WHERE d.idDevices =53
+
+Entrada registrada->     UPDATE Devices d
+				  SET IP = '192.168.1.131'
+				  WHERE d.idDevices =53
+
+Entrada registrada->     UPDATE Devices d
+				  SET IP = '192.168.1.131'
+				  WHERE d.idDevices =53
+
+Entrada registrada->     UPDATE Devices d
+				  SET IP = '192.168.1.131'
+				  WHERE d.idDevices =53
+
+Entrada registrada->     UPDATE Devices d
+				  SET IP = '192.168.1.131'
+				  WHERE d.idDevices =53
+
+Entrada registrada->     UPDATE Devices d
+				  SET IP = '192.168.1.131'
+				  WHERE d.idDevices =53
+
+Entrada registrada->     UPDATE Devices d
+				  SET IP = '192.168.1.131'
+				  WHERE d.idDevices =53
+
+Entrada registrada->     UPDATE Devices d
+				  SET IP = '192.168.1.131'
+				  WHERE d.idDevices =53
+
+Entrada registrada->     UPDATE Devices d
+				  SET IP = '192.168.1.131'
+				  WHERE d.idDevices =53
+
+Entrada registrada->     UPDATE Devices d
+				  SET IP = '192.168.1.131'
+				  WHERE d.idDevices =53
+
+Entrada registrada->     UPDATE Devices d
+				  SET IP = '192.168.1.131'
+				  WHERE d.idDevices =53
+
+Entrada registrada->     UPDATE Devices d
+				  SET IP = '192.168.1.131'
+				  WHERE d.idDevices =53
+
+Entrada registrada->     UPDATE Devices d
+				  SET IP = '192.168.1.131'
+				  WHERE d.idDevices =53
+
+Entrada registrada->     UPDATE Devices d
+				  SET IP = '192.168.1.131'
+				  WHERE d.idDevices =53
+
+Entrada registrada->     UPDATE Devices d
+				  SET IP = '192.168.1.131'
+				  WHERE d.idDevices =53
+
+Entrada registrada->     UPDATE Devices d
+				  SET IP = '192.168.1.131'
+				  WHERE d.idDevices =53
+
+Entrada registrada->     UPDATE Devices d
+				  SET IP = '192.168.1.131'
+				  WHERE d.idDevices =53
+
+Entrada registrada->     UPDATE Devices d
+				  SET IP = '192.168.1.131'
+				  WHERE d.idDevices =53
+
+Entrada registrada->     UPDATE Devices d
+				  SET IP = '192.168.1.131'
+				  WHERE d.idDevices =53
+
+Entrada registrada->     UPDATE Devices d
+				  SET IP = '192.168.1.131'
+				  WHERE d.idDevices =53
+
+Entrada registrada->     UPDATE Devices d
+				  SET IP = '192.168.1.131'
+				  WHERE d.idDevices =53
+
+Entrada registrada->     UPDATE Devices d
+				  SET IP = '192.168.1.131'
+				  WHERE d.idDevices =53
+
+Entrada registrada->     UPDATE Devices d
+				  SET IP = '192.168.1.131'
+				  WHERE d.idDevices =53
+
+Entrada registrada->     UPDATE Devices d
+				  SET IP = '192.168.1.131'
+				  WHERE d.idDevices =53
+
+Entrada registrada->     UPDATE Devices d
+				  SET IP = '192.168.1.131'
+				  WHERE d.idDevices =53
+
+Entrada registrada->     UPDATE Devices d
+				  SET IP = '192.168.1.131'
+				  WHERE d.idDevices =53
+
+Entrada registrada->     UPDATE Devices d
+				  SET IP = '192.168.1.131'
+				  WHERE d.idDevices =53
+
+Entrada registrada->     UPDATE Devices d
+				  SET IP = '192.168.1.131'
+				  WHERE d.idDevices =53
+
+Entrada registrada->     UPDATE Devices d
+				  SET IP = '192.168.1.131'
+				  WHERE d.idDevices =53
+
